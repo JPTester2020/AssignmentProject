@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
+    private bool isFirstColor = true;
     public static bool isColor = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,15 +18,17 @@ public class Arrow : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Color"))
         {
-            ColorChange(collision);
-
-            if (collision.gameObject.name == Character.nameColor) isColor = false;
-            else isColor = true;
+            if(isFirstColor) ColorChange(collision);
         }
     }
 
     private void ColorChange(Collider2D collision)
     {
+        isFirstColor = false;
+
+        if (collision.gameObject.name == Character.nameColor) isColor = false;
+        else isColor = true;
+
         SpriteRenderer _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.color = collision.GetComponent<SpriteRenderer>().color;
     }
