@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Color
+  - Barrier
+  - Bow
+  - Arrow
+  - Heart
+  - Colors
+  - Fire
+  - Character
+  - Score
+  - Lose
   layers:
   - Default
   - TransparentFX
