@@ -7,10 +7,7 @@ sceneSetups:
   isLoaded: 1
   isActive: 0
   isSubScene: 0
-<<<<<<< Updated upstream
 - path: Assets/Scenes/New start scene.unity
   isLoaded: 1
   isActive: 0
   isSubScene: 0
-=======
->>>>>>> Stashed changes
