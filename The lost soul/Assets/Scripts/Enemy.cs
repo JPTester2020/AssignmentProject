@@ -29,9 +29,7 @@ public class Enemy : MonoBehaviour
     [Space(5)] public float ReturnTime = 1f;
 
     private void Awake()
-
     {
-        Debug.Log(GameController.scoreHeart);
         Colors = GameObject.FindGameObjectWithTag("Colors");
 
         Time.timeScale = 1f;
@@ -80,7 +78,6 @@ public class Enemy : MonoBehaviour
                         break;
                 }
                 StartCoroutine(PlayDie(collision, ReturnTime));
-            
             }
             else
             {
